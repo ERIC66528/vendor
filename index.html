@@ -7,10 +7,10 @@
  
 </head>
 <body>
-       <div class="container">
+           <div class="container">
         <div class="bulging-text">
-            <span>E</span><span>X</span><span>C</span><span>E</span><span>L</span><span>L</span><span>E</span><span>N</span><span>T</span>
-            <span> </span><span>S</span><span>T</span><span>O</span><span>R</span><span>E</span><span>S</span>
+            <span style="--i: 0;">E</span><span style="--i: 1;">X</span><span style="--i: 2;">C</span><span style="--i: 3;">E</span><span style="--i: 4;">L</span><span style="--i: 5;">L</span><span style="--i: 6;">E</span><span style="--i: 7;">N</span><span style="--i: 8;">T</span>
+            <span style="--i: 9;"> </span><span style="--i: 10;">S</span><span style="--i: 11;">T</span><span style="--i: 12;">O</span><span style="--i: 13;">R</span><span style="--i: 14;">E</span><span style="--i: 15;">S</span>
         </div>
     </div>
     <p>
@@ -92,12 +92,14 @@
             background-color:#90EE90;
         }
     .bulging-text {
+.bulging-text {
     font-size: 2em;
 }
 
 .bulging-text span {
     display: inline-block;
     animation: bulge 1s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.1s);
 }
 
 @keyframes bulge {
@@ -106,6 +108,7 @@
     }
     50% {
         transform: scale(1.5);
+    }
     }
 }
 .container {
