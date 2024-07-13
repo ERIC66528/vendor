@@ -51,6 +51,13 @@
         </div>
         <!-- Add more products as needed -->
     </div>
+    
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvUTtLH9Hr2XtZNmVENlTMzwGduSRz2Oo&callback=initMap" async defer></script>
+   
+        
+    </div>
     <footer>
         <p>&copy; 2024 MKOPA<br>
             @Faith Mutindi Phones vendor</br>
@@ -98,10 +105,28 @@
             border-color:green;
             border-size:20px;
         }
+    #map {
+            height: 400px;  /* Adjust the height */
+            width: 100%;    /* Adjust the width */
+    }
         footer {
             background-color: #f4f4f4;
             text-align: center;
             padding: 10px 0;
-        }</style><script>document.getElementById('callButton').addEventListener('click', () => {
+        }</style>
+<script>
+    document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0705719709';
-        });</script>
+        });
+        function initMap() {
+            var location = {lat: -0.3387691, lng: 37.7517653};  // Your coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+        </script>
