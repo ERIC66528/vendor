@@ -18,6 +18,11 @@
     <p>
         <a href="https://www.facebook.com/faith.mutindi.73" class="facebook-button">Facebook</a>
     </p>
+    <p>
+        <button id="callButton" class="call-button"><b>Call<b></button>
+
+        
+    </p>
     
     <div class="hero">
         <h1>Affordable and Reliable Phones</h1>
@@ -122,6 +127,19 @@
 
 
 }
+.call-button{
+    background-color: green;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px
+
+
+
+}
         .hero {
             background: url('hero-image.jpg') no-repeat center center/cover;
             height:200px;
@@ -164,18 +182,7 @@
     document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0705719709';
         });
-    document.getElementById('callButton').addEventListener('click', () => {
-            window.location.href = 'tel:0705719709';
-        });
-    document.getElementById('callButton').addEventListener('click', () => {
-            window.location.href = 'tel:0705719709';
-        });
-    document.getElementById('callButton').addEventListener('click', () => {
-            window.location.href = 'tel:0705719709';
-        });
-    document.getElementById('callButton').addEventListener('click', () => {
-            window.location.href = 'tel:0705719709';
-        });
+ 
         function initMap() {
             var location = {lat: -0.3387691, lng: 37.7517653};  // Your coordinates
             var map = new google.maps.Map(document.getElementById('map'), {
