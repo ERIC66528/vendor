@@ -86,6 +86,15 @@
    
         
     </div>
+    <div class="info">
+        <p class="text"><b>FOR MORE INFO:</b></p>
+    <p> <button id="callButton" onclick="alert('You are contacting Eric Matei')" class="call">Call Eric</button> </p>
+    <p>  <button id="emailbutton" onclick="alert('You are sending e-mail to Eric Matei')" class="call">Send email</button>
+    <p> <button class="call"> <a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a> </button> </p>
+    
+
+        
+    </div>
     <footer>
         <p>&copy; 2024 MKOPA<br>
             @Faith Mutindi Phones vendor</br>
@@ -203,6 +212,17 @@
             height: 400px;  /* Adjust the height */
             width: 100%;    /* Adjust the width */
     }
+.info{
+ color:white;
+ padding:40px; 
+ border-radius:10px;
+ background-color:black;
+    }
+.call{
+  font-size:16px;
+  background-color:white;
+  color:black;
+  
         footer {
             background-color: #f4f4f4;
             text-align: center;
@@ -224,4 +244,10 @@
                 map: map
             });
         }
+document.getElementById('callButton').addEventListener('click', () => {
+            window.location.href = 'tel:0717831209';
+        });
+document.getElementById('emailbutton').addEventListener('click', () => {
+            window.location.href = 'mailto:mateieric66@gmail.com';
+        });
         </script>
