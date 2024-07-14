@@ -23,7 +23,7 @@
         <a href="https://www.facebook.com/faith.mutindi.73" class="facebook-button">Facebook</a>
     </p>
     <p>
-        <button id="callButton" class="call-button"><b>Call<b></button>
+        <button id="callButton" class="callbutton"><b>Call<b></button>
 
         
     </p>
@@ -37,35 +37,35 @@
             <h2>Nokia C32</h2>
             <p>Kshs.85 per day
                 <br>Deposit=5,119</br></p>
-            <button id="callButton">Call vendor to<br>Buy Now</b></button>
+                    <a href="tel:+254705719709" class="call-button">Call to buy now</a>
         </div>
         <div class="product">
             <img src="https://www.phoneplacekenya.com/wp-content/uploads/2023/08/Nokia-C22.jpg" alt="Nokia C22" width="150">
             <h2>Nokia C22</h2>
             <p>Kshs.65 per day
                 <br>Deposit=5,119</br></p>
-            <button id="callButton">Call vendor to<br>Buy Now</b></button>
+                    <a href="tel:+254705719709" class="call-button">Call to buy now</a>
         </div>
         <div class="product">
             <img src="https://www.phoneplacekenya.com/wp-content/uploads/2023/08/Nokia-C22.jpg" alt="Nokia C22" width="150">
             <h2>Nokia C22</h2>
          <p>Kshs.85 per day
                 <br>Deposit=5,119</br></p>
-            <button id="callButton">Call vendor to<br>Buy Now</b></button>
+                    <a href="tel:+254705719709" class="call-button">Call to buy now</a>
         </div>
         <div class="product">
             <img src="https://www.phoneplacekenya.com/wp-content/uploads/2023/08/Nokia-C22.jpg" alt="Nokia C22" width="150">
             <h2>Nokia C22</h2>
             <p>Kshs.85 per day
                 <br>Deposit=5,119</br></p>
-            <button id="callButton">Call vendor to<br>Buy Now</b></button>
+                    <a href="tel:+254705719709" class="call-button">Call to buy now</a>
         </div>
         <div class="product">
             <img src="https://www.phoneplacekenya.com/wp-content/uploads/2023/08/Nokia-C22.jpg" alt="Nokia C22" width="150">
             <h2>Nokia C22</h2>
          <p>Kshs.85 per day
                 <br>Deposit=5,119</br></p>
-            <button id="callButton">Call vendor to<br>Buy Now</b></button>
+                    <a href="tel:+254705719709" class="call-button">Call to but now</a>
         </div>
         <!-- Add more products as needed -->
     </div><p>
@@ -82,9 +82,9 @@
     </div>
     <div class="info">
         <p class="text"><b>FOR MORE INFO:</b></p>
-    <p> <button id="callButton" onclick="alert('You are contacting Eric Matei')" class="call">Call</button> </p>
-    <p>  <button id="emailbutton" onclick="alert('You are sending e-mail to Eric Matei')" class="call">Send email</button></p>
-    <p> <button class="call"> <a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a> </button> </p>
+    <a href="tel:+254717831209" class="call-button">Call to but now</a>
+    <p>  <button id="emailbutton" onclick="alert('You are sending e-mail to Eric Matei')" class="call-button">Send email</button></p>
+    <p> <button class="call-button"> <a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a> </button> </p>
         
     </div>
     <footer class="footer">
@@ -159,7 +159,7 @@ body {
 
 
 }
-.call-button{
+.callbutton{
     background-color: green;
       color: white;
       padding: 10px 20px;
@@ -201,6 +201,21 @@ body {
             border-color:green;
             border-size:20px;
         }
+.call-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #0056b3;
+                }
     #map {
             height: 400px;  /* Adjust the height */
             width: 100%;    /* Adjust the width */
@@ -238,9 +253,7 @@ body {
                 map: map
             });
         }
-document.getElementById('callButton').addEventListener('click', () => {
-            window.location.href = 'tel:0717831209';
-        });
+
 document.getElementById('emailbutton').addEventListener('click', () => {
             window.location.href = 'mailto:mateieric66@gmail.com';
         });
