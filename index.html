@@ -41,8 +41,7 @@
            
         </ul>
     </div>
-    <div class="products">
-        <d
+            
        <b>LOCATION:</b> 
 
         
@@ -59,7 +58,7 @@
     <div class="info">
         <p class="text"><b>FOR MORE INFO:</b></p>
    <br> <a href="tel:+254717831209" class="call-button">Call</a> </br>
-    <br>  <button id="emailbutton" onclick="alert('You are sending e-mail to Eric Matei')" class="call-button">Send email</button></br>
+    <br>  <button id="emailbutton" onclick="alert('You are sending e-mail to Rictei-softwares')" class="call-button">Send email</button></br>
     <br> <button class="call-button"> <a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a> </button> </br>
         
     </div>
@@ -215,6 +214,17 @@ body {
  border-radius:20px;
  background-color:black;
     }
+.call-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    }
   
 .footer {
             background-color: #f4f4f4;
@@ -293,4 +303,23 @@ window.onclick = function(event) {
 document.getElementById('emailbutton').addEventListener('click', () => {
             window.location.href = 'mailto:mateieric66@gmail.com';
         });
+function showNotification(message) {
+    const container = document.getElementById('notification-container');
+    
+    const notification = document.createElement('div');
+    notification.classList.add('notification');
+    notification.innerText = message;
+
+    container.appendChild(notification);
+
+    // Remove the notification after 5 seconds
+    setTimeout(() => {
+        notification.remove();
+    }, 5000);
+}
+
+// Example usage
+document.addEventListener('DOMContentLoaded', () => {
+    showNotification('Hello! WELCOME TO EXELLENT STORES.');
+});
         </script>
