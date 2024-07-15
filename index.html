@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="google-adsense-account" content="ca-pub-2696813634344709">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <b><title>EXCELLENT STORES</title></b>
@@ -30,6 +30,16 @@
     
     <div class="hero">
         <h2>Affordable and Reliable</h2>
+    </div>
+    <button id="linkButton">Choose items to shop</button>
+
+    <div id="popupMenu" class="popup-menu">
+        <ul>
+            <li>Phones</li>
+            <li>Household items</li>
+            <li>groceries</li>
+           
+        </ul>
     </div>
     <div class="products">
         <div class="product">
@@ -189,6 +199,44 @@ body {
         .hero h1 {
             font-size: 3em;
         }
+    #linkButton {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup-menu {
+    display:none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color:pink;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    color:white;
+}
+
+.popup-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20;
+}
+
+.popup-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.popup-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.popup-menu ul li a:hover {
+    background-color: #f0f0f0;
+          }
         .products {
             display: flex;
             flex-wrap: wrap;
@@ -276,6 +324,23 @@ body {
     document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0705719709';
         });
+    document.getElementById('linkButton').addEventListener('click', function() {
+    var popupMenu = document.getElementById('popupMenu');
+    if (popupMenu.style.display === 'none' || popupMenu.style.display === '') {
+        popupMenu.style.display = 'block';
+    } else {
+        popupMenu.style.display = 'none';
+    }
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('#linkButton')) {
+        var popupMenu = document.getElementById('popupMenu');
+        if (popupMenu.style.display === 'block') {
+            popupMenu.style.display = 'none';
+        }
+    }
+};
  
         function initMap() {
             var location = {lat: -1.5353125, lng: 37.1348281};  // Your coordinates
