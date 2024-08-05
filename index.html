@@ -16,7 +16,7 @@
         </div>
     </div>
     <p>
-        <h1 id="greeting">Welcome!</h1>
+        <h1 id="greeting">Welcome!</h1> <div class="waving-hand">👋</div>
     </p>
   <b> <p class="welcome">
         <marquee behavior="alternate" >WELCOME</marquee>
@@ -111,6 +111,22 @@ body {
             color: #00FFFF;
             padding: 30px 0;
             text-align: center;
+    }
+.waving-hand {
+    font-size: 50px; /* Size of the emoji */
+    display: inline-block;
+    animation: wave-animation 2s infinite;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); } /* Rest position */
+    100% { transform: rotate(0deg); }
     }
 .welcome{
     color:white;
