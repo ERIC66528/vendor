@@ -15,6 +15,9 @@
             <span style="--i: 9;"> </span><span style="--i: 10;">S</span><span style="--i: 11;">T</span><span style="--i: 12;">O</span><span style="--i: 13;">R</span><span style="--i: 14;">E</span><span style="--i: 15;">S</span>
         </div>
     </div>
+    <p>
+        <h1 id="greeting">Welcome!</h1>
+    </p>
   <b> <p class="welcome">
         <marquee behavior="alternate" >WELCOME</marquee>
 
@@ -255,6 +258,25 @@ body {
 
 </style>
 <script>
+        if (hours < 12) {
+        greeting = "Good morning";
+    } else if (hours < 18) {
+        greeting = "Good afternoon";
+    } else {
+        greeting = "Good evening";
+    }
+
+    return greeting;
+}
+
+function updateGreeting() {
+    const greetingElement = document.getElementById("greeting");
+    greetingElement.textContent = getGreeting();
+}
+
+// Call the function to update the greeting when the page loads
+updateGreeting();
+    
     document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0705719709';
         });
