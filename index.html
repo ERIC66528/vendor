@@ -258,7 +258,12 @@ body {
 
 </style>
 <script>
-        if (hours < 12) {
+        function getGreeting() {
+    const now = new Date();
+    const hours = now.getHours();
+    let greeting;
+
+    if (hours < 12) {
         greeting = "Good morning";
     } else if (hours < 18) {
         greeting = "Good afternoon";
