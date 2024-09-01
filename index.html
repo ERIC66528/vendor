@@ -239,352 +239,13 @@ body {
     background-color: #f0f0f0;
           }
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: pink;
-}
-
-.bulging-text {
-    font-size: 2em;
-}
-
-.bulging-text span {
-    display: inline-block;
-    animation: bulge 1s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.1s);
-}
-
-@keyframes bulge {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-}
-
-.container {
-    background-color: black;
-    color: #00FFFF;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.waving-hand {
-    font-size: 50px;
-    display: inline-block;
-    animation: wave-animation 2s infinite;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.welcome {
-    color: white;
-    font-size: 30px;
-    background-color: black;
-}
-
-.call {
-    padding: 20px;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
-    align: center;
-}
-
-.whatsapp-button,
-.facebook-button,
-.callbutton,
-button {
-    animation: bounce 2s infinite;
-    transition: transform 0.2s ease-in-out;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-}
-
-.whatsapp-button {
-    background-color: #25d366;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.facebook-button {
-    background-color: blue;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.callbutton {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 30px;
-}
-
-#linkButton {
-    margin: 20px;
-    padding: 20px 100px;
-    font-size: 20px;
-    cursor: pointer;
-    color: red;
-    background-color: black;
-}
-
-.popup-menu {
-    display: none;
-    position: absolute;
-    top: 300px;
-    left: 100px;
-    background-color: purple;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: pink;
-}
-
-.bulging-text {
-    font-size: 2em;
-}
-
-.bulging-text span {
-    display: inline-block;
-    animation: bulge 1s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.1s);
-}
-
-@keyframes bulge {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-}
-
-.container {
-    background-color: black;
-    color: #00FFFF;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.waving-hand {
-    font-size: 50px;
-    display: inline-block;
-    animation: wave-animation 2s infinite;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.welcome {
-    color: white;
-    font-size: 30px;
-    background-color: black;
-}
-
-.call {
-    padding: 20px;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
-    align: center;
-}
-
-.whatsapp-button,
-.facebook-button,
-.callbutton,
-button {
-    position: relative;
-    overflow: hidden;
-}
-
-.whatsapp-button::after,
-.facebook-button::after,
-.callbutton::after,
-button::after {
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.5s, opacity 1s;
-    opacity: 0;
-    width: 100px;
-    height: 100px;
-}
-
-.whatsapp-button:active::after,
-.facebook-button:active::after,
-.callbutton:active::after,
-button:active::after {
-    transform: scale(4);
-    opacity: 1;
-    transition: transform 0.5s, opacity 1s;
-}
-
-.whatsapp-button {
-    background-color: #25d366;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.facebook-button {
-    background-color: blue;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.callbutton {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 30px;
-}
-
-#linkButton {
-    margin: 20px;
-    padding: 20px 100px;
-    font-size: 20px;
-    cursor: pointer;
-    color: red;
-    background-color: black;
-}
-
-.popup-menu {
-    display: none;
-    position: absolute;
-    top: 300px;
-    left: 100px;
-    background-color: purple;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    color: white;
-    font-size: 20px;
-    padding: 30px;
-    border-radius: 30px;
-}
-
-.popup-menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
-}
-
-.popup-menu ul li {
-    padding: 0px;
-    border-bottom: 1px solid #ccc;
-}
-
-.popup-menu ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.popup-menu ul li a:hover {
-    background-color: #f0f0f0;
-}
-
 .info {
-    padding: 20px;
-    background-color: #34495e;
-    color: #ecf0f1;
-    border-radius: 10px;
-    text-align: center;
-}
-
+            padding: 20px;
+            background-color: #34495e;
+            color: #ecf0f1;
+            border-radius: 10px;
+            text-align: center;
+    }
 .call-button {
     display: inline-block;
     margin: 10px;
@@ -595,22 +256,22 @@ button:active::after {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-}
-
+    }
 .call-button:hover {
     background-color: #0056b3;
 }
-
-#map {
-    height: 400px;
-    width: 100%;
-}
-
+    #map {
+            height: 400px;  /* Adjust the height */
+            width: 100%;    /* Adjust the width */
+    }
+  
 .footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10px 0;
-}
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            
+        }
+
 </style>
 <script>
         function getGreeting() {
@@ -692,4 +353,4 @@ function showNotification(message) {
 document.addEventListener('DOMContentLoaded', () => {
     showNotification('Hello! WELCOME TO EXELLENT STORES.');
 });
-        </script>
+    </script>
