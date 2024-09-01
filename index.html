@@ -3,12 +3,173 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    
     <title>EXCELLENT STORES</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696813634344709"
      crossorigin="anonymous"></script>
-    <!-- Google Maps API script should be placed here -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvUTtLH9Hr2XtZNmVENlTMzwGduSRz2Oo&callback=initMap" async defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+        }
+
+        .container {
+            background-color: black;
+            color: #00FFFF;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .bulging-text {
+            font-size: 2em;
+        }
+
+        .bulging-text span {
+            display: inline-block;
+            animation: bulge 1s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.1s);
+        }
+
+        @keyframes bulge {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+
+        .waving-hand {
+            font-size: 50px; /* Size of the emoji */
+            display: inline-block;
+            animation: wave-animation 2s infinite;
+        }
+
+        @keyframes wave-animation {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); } /* Rest position */
+            100% { transform: rotate(0deg); }
+        }
+
+        .welcome {
+            color: white;
+            font-size: 30px;
+            background-color: black;
+        }
+
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .facebook-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .callbutton {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+        }
+
+        #linkButton {
+            margin: 20px;
+            padding: 20px 100px;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+            background-color: black;
+        }
+
+        .popup-menu {
+            display: none;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+            background-color: purple;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            color: white;
+            font-size: 20px;
+            padding: 30px;
+            border-radius: 30px;
+        }
+
+        .popup-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .popup-menu ul li {
+            padding: 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .popup-menu ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .popup-menu ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .info {
+            padding: 20px;
+            background-color: #34495e;
+            color: #ecf0f1;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #map {
+            height: 400px;  /* Adjust the height */
+            width: 100%;    /* Adjust the width */
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -47,7 +208,7 @@
     </div>
 
     <p><b>LOCATION:</b></p>
-    <div id="map" style="height: 400px; width: 100%;"></div>
+    <div id="map"></div>
 
     <div class="info">
         <p><strong>FOR MORE INFO:</strong></p>
@@ -89,59 +250,4 @@
             window.location.href = 'tel:0705719709';
         });
 
-        document.getElementById('linkButton').addEventListener('click', function() {
-            var popupMenu = document.getElementById('popupMenu');
-            if (popupMenu.style.display === 'none' || popupMenu.style.display === '') {
-                popupMenu.style.display = 'block';
-            } else {
-                popupMenu.style.display = 'none';
-            }
-        });
-
-        window.onclick = function(event) {
-            if (!event.target.matches('#linkButton')) {
-                var popupMenu = document.getElementById('popupMenu');
-                if (popupMenu.style.display === 'block') {
-                    popupMenu.style.display = 'none';
-                }
-            }
-        };
-
-        function initMap() {
-            var location = {lat: -1.5353125, lng: 37.1348281};  // Your coordinates
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-
-        document.getElementById('emailbutton').addEventListener('click', () => {
-            window.location.href = 'mailto:mateieric66@gmail.com';
-        });
-
-        function showNotification(message) {
-            const container = document.getElementById('notification-container');
-            
-            const notification = document.createElement('div');
-            notification.classList.add('notification');
-            notification.innerText = message;
-
-            container.appendChild(notification);
-
-            // Remove the notification after 5 seconds
-            setTimeout(() => {
-                notification.remove();
-            }, 5000);
-        }
-
-        // Example usage
-        document.addEventListener('DOMContentLoaded', () => {
-            showNotification('Hello! WELCOME TO EXCELLENT STORES.');
-        });
-    </script>
-</body>
-</html>
+        document.getElementById('linkButton').addEventListener('click
