@@ -214,9 +214,15 @@ body {
 }
 .horizontal-scroll {
   display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow: hidden; /* Hide the overflow to create a clean scrolling effect */
   white-space: nowrap; /* Prevents line breaks */
-  scroll-behavior: smooth; /* Smooth scrolling effect */
+  animation: scroll-horizontal 10s linear infinite; /* Apply animation */
+}
+
+.horizontal-scroll::before,
+.horizontal-scroll::after {
+  content: url('https://raw.githubusercontent.com/ERIC66528/vendor/main/Advert.png?raw=true');
+  margin-right: 10px; /* Spacing between images */
 }
 
 .horizontal-scroll img {
@@ -227,7 +233,17 @@ body {
 
 .horizontal-scroll img:hover {
   transform: scale(1.1); /* Optional: zoom effect on hover */
-    }
+}
+
+/* Keyframes for horizontal scrolling animation */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .popup-menu {
     display:none;
     position: absolute;
