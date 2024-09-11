@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +73,6 @@
     </div>
     <br>
     </br>
-     </body>
        <div class="info">
         <p><strong>FOR MORE INFO:</strong></p>
         <p><a href="tel:+254717831209" class="callbutton">Call</a></p>
@@ -87,10 +86,9 @@
     </footer>
     
     
-
+</body>
 </html>
-<style>
-body {
+<style>body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -215,15 +213,9 @@ body {
 }
 .horizontal-scroll {
   display: flex;
-  overflow: hidden; /* Hide the overflow to create a clean scrolling effect */
+  overflow-x: auto; /* Enables horizontal scrolling */
   white-space: nowrap; /* Prevents line breaks */
-  animation: scroll-horizontal 10s linear infinite; /* Apply animation */
-}
-
-.horizontal-scroll::before,
-.horizontal-scroll::after {
-  content: url('https://raw.githubusercontent.com/ERIC66528/vendor/main/Advert.png?raw=true');
-  margin-right: 10px; /* Spacing between images */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 .horizontal-scroll img {
@@ -234,16 +226,7 @@ body {
 
 .horizontal-scroll img:hover {
   transform: scale(1.1); /* Optional: zoom effect on hover */
-}
-
-/* Keyframes for horizontal scrolling animation */
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+    }
 .popup-menu {
     display:none;
     position: absolute;
@@ -310,11 +293,7 @@ body {
             text-align: center;
             padding: 10px 0;
             
-        }
-
-</style>
-<script>
-        function getGreeting() {
+        }</style><script> function getGreeting() {
     const now = new Date();
     const hours = now.getHours();
     let greeting;
@@ -393,4 +372,4 @@ function showNotification(message) {
 document.addEventListener('DOMContentLoaded', () => {
     showNotification('Hello! WELCOME TO EXELLENT STORES.');
 });
-    </script>
+            </script>
