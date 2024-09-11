@@ -40,6 +40,15 @@
     <div class="hero">
         <h2>Affordable and Reliable</h2>
     </div>
+
+            
+    <div class="horizontal-scroll">
+  <img src="URL_OF_YOUR_IMAGE_1" alt="Advert 1">
+  <img src="URL_OF_YOUR_IMAGE_2" alt="Advert 2">
+  <img src="URL_OF_YOUR_IMAGE_3" alt="Advert 3">
+    </div>
+
+            
     <button id="linkButton" >Choose items to shop here 🔽</button>
 
     <div id="popupMenu" class="popup-menu">
@@ -203,7 +212,22 @@ body {
     color:red;
     background-color:black;
 }
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents line breaks */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
 
+.horizontal-scroll img {
+  height: 150px; /* Set to match the height of your images */
+  margin-right: 10px; /* Spacing between images */
+  transition: transform 0.3s; /* Optional: smooth hover animation */
+}
+
+.horizontal-scroll img:hover {
+  transform: scale(1.1); /* Optional: zoom effect on hover */
+    }
 .popup-menu {
     display:none;
     position: absolute;
